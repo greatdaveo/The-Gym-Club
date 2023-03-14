@@ -1,0 +1,22 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 10rem;
+  height: 3rem;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+  color: white;
+}
+
+.nav-links li:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
