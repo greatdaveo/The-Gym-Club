@@ -5,7 +5,11 @@ import rightArrow from "../assets/rightArrow.png";
 import { testimonialsData } from "../data/testimonialsData";
 import { useState } from "react";
 
+import { motion } from "framer-motion";
+
 const Testimonials = () => {
+  const transition = { type: "spring", duration: 3 };
+
   const [selected, setSelected] = useState(0);
   const Text_Length = testimonialsData.length;
 
@@ -31,7 +35,15 @@ const Testimonials = () => {
         <span>TESTIMONIALS</span>
         <span className="stroke-text">WHAT THEY</span>
         <span>SAY ABOUT US</span>
-        <span>{testimonialsData[selected].review}</span>
+        <motion.span
+          key={selected}
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 100 }}
+          transition={transition}
+        >
+          {testimonialsData[selected].review}
+        </motion.span>
         <span>
           <span style={{ color: "var(--orange)" }}>
             {testimonialsData[selected].name}{" "}
@@ -39,10 +51,31 @@ const Testimonials = () => {
           - {testimonialsData[selected].status}
         </span>
       </div>
+
+      {/* FRAMER MOTION ANIMATION */}
       <div className="right-testimonial">
-        <div></div>
-        <div></div>
-        <img src={testimonialsData[selected].image} alt="" />
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ ...transition, duration: 2 }}
+        ></motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ ...transition, duration: 2 }}
+        ></motion.div>
+
+        <motion.img
+          key={selected}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 1, x: -100 }}
+          transition={transition}
+          src={testimonialsData[selected].image}
+          alt=""
+        />
+
+        {/* ::::::::::::::::::::::::::::::: */}
 
         <div className="arrows">
           <img onClick={handleLeftArrow} src={leftArrow} alt="" />
