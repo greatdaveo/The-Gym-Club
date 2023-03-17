@@ -3,6 +3,16 @@
   justify-content: space-between;
 }
 
+/* FOR THE HERO BLUR STYLING */
+
+.hero-blur {
+  width: 22rem;
+  height: 30rem;
+  left: 0;
+}
+
+/* ::::::::::::::::::::::::::::: */
+
 .left-hero {
   padding: 2rem;
   padding-top: 1.5rem;

@@ -7,6 +7,23 @@
   position: relative;
 }
 
+/* FOR THE PLANS BLUR STYLING */
+.plans-blur-1 {
+  width: 32rem;
+  height: 23rem;
+  top: 6rem;
+  left: 0rem;
+}
+
+.plans-blur-2 {
+  width: 32rem;
+  height: 23rem;
+  top: 10rem;
+  right: 0rem;
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
 .plans-card {
   display: flex;
   justify-content: center;

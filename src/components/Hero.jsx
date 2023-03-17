@@ -9,6 +9,10 @@ import CaloriesImage from "../assets/calories.png";
 const Hero = () => {
   return (
     <div className="hero">
+      {/* FOR THE BLUR STYLING */}
+      <div className="blur hero-blur"></div>
+
+      {/* ::::::::::::::::::::::::::::::: */}
       <div className="left-hero">
         <Header />
 
