@@ -1,0 +1,31 @@
+.footer-container {
+  position: relative;
+}
+
+footer hr {
+  border: 1px solid var(--lightgray);
+}
+
+.footer-items {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 4rem;
+}
+
+.footer-icons img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.footer-logo img {
+  width: 10rem;
+}
