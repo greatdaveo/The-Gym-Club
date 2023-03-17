@@ -5,7 +5,7 @@ import whiteTick from "../assets/whiteTick.png";
 
 const Plans = () => {
   return (
-    <div className="plans-container">
+    <div className="plans-container" id="plans">
       {/* FOR THE PLANS BLUR STYLING */}
       <div className="blur plans-blur-1"></div>
       <div className="blur plans-blur-2"></div>

@@ -20,7 +20,7 @@
   overflow: hidden;
 }
 ::-webkit-scrollbar {
-  /* display: none; */
+  display: none;
 }
 
 .stroke-text {

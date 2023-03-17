@@ -92,3 +92,14 @@
 .feature img {
   width: 1rem;
 }
+
+/* MEDIA QUERY */
+@media screen and (max-width: 768px) {
+  .plans-card {
+    flex-direction: column;
+  }
+
+  .plans-card :nth-child(2) {
+    transform: none;
+  }
+}

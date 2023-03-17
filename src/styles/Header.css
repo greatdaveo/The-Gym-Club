@@ -1,4 +1,4 @@
-header{
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,4 +19,20 @@ header{
 .nav-links li:hover {
   color: var(--orange);
   cursor: pointer;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 768px) {
+  header>:nth-child(2) {
+    position: fixed;
+    right: 2rem;
+    z-index: 99;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    top: 2rem;
+    background-color: var(--appColor);
+    padding: 2rem;
+  }
 }

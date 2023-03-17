@@ -52,3 +52,20 @@
   background-color: var(--orange);
   color: white;
 }
+
+/* MEDIA QUERY */
+@media screen and (max-width: 768px) {
+  .join-us {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .left-ju {
+    font-size: x-large;
+    flex-direction: column;
+  }
+
+  .right-ju {
+    padding: 2rem;
+  }
+}

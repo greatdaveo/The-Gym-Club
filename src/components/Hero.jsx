@@ -1,4 +1,5 @@
 import React from "react";
+import NumberCounter from "number-counter";
 import Header from "./Header";
 import "../styles/Hero.css";
 import HeroImage from "../assets/hero_image.png";
@@ -10,9 +11,10 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   const transition = { type: "spring", duration: 3 };
+  const screenSize = window.innerWidth <= 768 ? true : false;
 
   return (
-    <div className="hero">
+    <div className="hero" id="home">
       {/* FOR THE BLUR STYLING */}
       <div className="blur hero-blur"></div>
 
@@ -23,7 +25,7 @@ const Hero = () => {
         <div className="the-best-ad">
           {/* Framer Motion Animation */}
           <motion.div
-            initial={{ left: "210px" }}
+            initial={{ left: screenSize ? "158px" : "210px" }}
             whileInView={{ left: "10px" }}
             transition={{ ...transition, type: "tween" }}
           ></motion.div>
@@ -52,15 +54,21 @@ const Hero = () => {
         {/* HERO FIGURES */}
         <div className="hero-figures">
           <div>
-            <span>+140</span>
+            <span>
+              <NumberCounter start={100} end={140} delay="4" preFix="+" />
+            </span>
             <span>EXPERT COACHES</span>
           </div>
           <div>
-            <span>+978</span>
+            <span>
+              <NumberCounter start={100} end={978} delay="4" preFix="+" />
+            </span>
             <span>MEMBERS JOINED</span>
           </div>
           <div>
-            <span>+50</span>
+            <span>
+              <NumberCounter start={1} end={50} delay="4" preFix="+" />
+            </span>
             <span>FITNESS PROGRAMS</span>
           </div>
         </div>
